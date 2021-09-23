@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF31B29926FC749000023DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B29826FC749000023DF2 /* AppDelegate.swift */; };
+		EF31B29B26FC749000023DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B29A26FC749000023DF2 /* SceneDelegate.swift */; };
+		EF31B29D26FC749000023DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B29C26FC749000023DF2 /* ViewController.swift */; };
+		EF31B2A026FC749000023DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31B29E26FC749000023DF2 /* Main.storyboard */; };
+		EF31B2A226FC749200023DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF31B2A126FC749200023DF2 /* Assets.xcassets */; };
+		EF31B2A526FC749200023DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31B2A326FC749200023DF2 /* LaunchScreen.storyboard */; };
+		EF31B2B526FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */; };
+		EF31B2B626FC74A200023DF2 /* TLRedPacketRainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */; };
+		EF31B2B726FC74A200023DF2 /* TLRedPacketRainStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */; };
+		EF31B2B826FC74A200023DF2 /* TLRedPacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */; };
+		EF31B2B926FC74A200023DF2 /* TLRedPacketRainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */; };
+		EF31B2BA26FC74A200023DF2 /* TLPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B326FC74A200023DF2 /* TLPreview.swift */; };
+		EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */; };
+		EF31B2BE26FC74CF00023DF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF31B2BD26FC74CF00023DF2 /* SnapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF31B29526FC749000023DF2 /* TLRedpacketRain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLRedpacketRain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF31B29826FC749000023DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF31B29A26FC749000023DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF31B29C26FC749000023DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF31B29F26FC749000023DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF31B2A126FC749200023DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF31B2A426FC749200023DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF31B2A626FC749200023DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainStartCountdownView.swift; sourceTree = "<group>"; };
+		EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainViewModel.swift; sourceTree = "<group>"; };
+		EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainStatusView.swift; sourceTree = "<group>"; };
+		EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketView.swift; sourceTree = "<group>"; };
+		EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainViewController.swift; sourceTree = "<group>"; };
+		EF31B2B326FC74A200023DF2 /* TLPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLPreview.swift; sourceTree = "<group>"; };
+		EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLViewWrapperViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF31B29226FC749000023DF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF31B2BE26FC74CF00023DF2 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF31B28C26FC749000023DF2 = {
+			isa = PBXGroup;
+			children = (
+				EF31B29726FC749000023DF2 /* TLRedpacketRain */,
+				EF31B29626FC749000023DF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF31B29626FC749000023DF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF31B29526FC749000023DF2 /* TLRedpacketRain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF31B29726FC749000023DF2 /* TLRedpacketRain */ = {
+			isa = PBXGroup;
+			children = (
+				EF31B2AC26FC74A200023DF2 /* RedPacketRain */,
+				EF31B2B326FC74A200023DF2 /* TLPreview.swift */,
+				EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */,
+				EF31B29826FC749000023DF2 /* AppDelegate.swift */,
+				EF31B29A26FC749000023DF2 /* SceneDelegate.swift */,
+				EF31B29C26FC749000023DF2 /* ViewController.swift */,
+				EF31B29E26FC749000023DF2 /* Main.storyboard */,
+				EF31B2A126FC749200023DF2 /* Assets.xcassets */,
+				EF31B2A326FC749200023DF2 /* LaunchScreen.storyboard */,
+				EF31B2A626FC749200023DF2 /* Info.plist */,
+			);
+			path = TLRedpacketRain;
+			sourceTree = "<group>";
+		};
+		EF31B2AC26FC74A200023DF2 /* RedPacketRain */ = {
+			isa = PBXGroup;
+			children = (
+				EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */,
+				EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */,
+				EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */,
+				EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */,
+				EF31B2AE26FC74A200023DF2 /* ViewModel */,
+			);
+			path = RedPacketRain;
+			sourceTree = "<group>";
+		};
+		EF31B2AE26FC74A200023DF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF31B29426FC749000023DF2 /* TLRedpacketRain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF31B2A926FC749200023DF2 /* Build configuration list for PBXNativeTarget "TLRedpacketRain" */;
+			buildPhases = (
+				EF31B29126FC749000023DF2 /* Sources */,
+				EF31B29226FC749000023DF2 /* Frameworks */,
+				EF31B29326FC749000023DF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLRedpacketRain;
+			packageProductDependencies = (
+				EF31B2BD26FC74CF00023DF2 /* SnapKit */,
+			);
+			productName = TLRedpacketRain;
+			productReference = EF31B29526FC749000023DF2 /* TLRedpacketRain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF31B28D26FC749000023DF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					EF31B29426FC749000023DF2 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = EF31B29026FC749000023DF2 /* Build configuration list for PBXProject "TLRedpacketRain" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF31B28C26FC749000023DF2;
+			packageReferences = (
+				EF31B2BC26FC74CF00023DF2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = EF31B29626FC749000023DF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF31B29426FC749000023DF2 /* TLRedpacketRain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF31B29326FC749000023DF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF31B2A526FC749200023DF2 /* LaunchScreen.storyboard in Resources */,
+				EF31B2A226FC749200023DF2 /* Assets.xcassets in Resources */,
+				EF31B2A026FC749000023DF2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF31B29126FC749000023DF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF31B29D26FC749000023DF2 /* ViewController.swift in Sources */,
+				EF31B2B626FC74A200023DF2 /* TLRedPacketRainViewModel.swift in Sources */,
+				EF31B2B926FC74A200023DF2 /* TLRedPacketRainViewController.swift in Sources */,
+				EF31B2B826FC74A200023DF2 /* TLRedPacketView.swift in Sources */,
+				EF31B2B526FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift in Sources */,
+				EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */,
+				EF31B29926FC749000023DF2 /* AppDelegate.swift in Sources */,
+				EF31B2B726FC74A200023DF2 /* TLRedPacketRainStatusView.swift in Sources */,
+				EF31B29B26FC749000023DF2 /* SceneDelegate.swift in Sources */,
+				EF31B2BA26FC74A200023DF2 /* TLPreview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF31B29E26FC749000023DF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF31B29F26FC749000023DF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF31B2A326FC749200023DF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF31B2A426FC749200023DF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF31B2A726FC749200023DF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF31B2A826FC749200023DF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF31B2AA26FC749200023DF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TLRedpacketRain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.TLRedpacketRain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF31B2AB26FC749200023DF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TLRedpacketRain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teenloong.TLRedpacketRain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF31B29026FC749000023DF2 /* Build configuration list for PBXProject "TLRedpacketRain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF31B2A726FC749200023DF2 /* Debug */,
+				EF31B2A826FC749200023DF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF31B2A926FC749200023DF2 /* Build configuration list for PBXNativeTarget "TLRedpacketRain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF31B2AA26FC749200023DF2 /* Debug */,
+				EF31B2AB26FC749200023DF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF31B2BC26FC74CF00023DF2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF31B2BD26FC74CF00023DF2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF31B2BC26FC74CF00023DF2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EF31B28D26FC749000023DF2 /* Project object */;
+}
