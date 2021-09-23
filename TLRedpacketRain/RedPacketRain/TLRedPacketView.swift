@@ -1,6 +1,6 @@
 //
 //  TLRedPacketView.swift
-//  TLRedPacketRain
+//  TLRedpacketRain
 //
 //  Created by teenloong on 2021/9/22.
 //
@@ -11,11 +11,11 @@ import SnapKit
 import SwiftUI
 #endif
 
-protocol TLRedPacketViewDelegate: class {
-    func tlRedPacketViewDidSelected(_ redPacketView: TLRedPacketView, redPacket: TLRedPacket)
+protocol TLRedpacketViewDelegate: class {
+    func tlRedpacketViewDidSelected(_ redpacketView: TLRedpacketView, redPacket: TLRedpacket)
 }
 
-fileprivate extension TLRedPacket {
+fileprivate extension TLRedpacket {
     var imageName: String {
         switch reward {
         case .empty:    return "red_packet_empty"
@@ -27,19 +27,21 @@ fileprivate extension TLRedPacket {
     var defaultImageName: String { "red_packet_Falling" }
 }
 
-class TLRedPacketView: UIButton {
+class TLRedpacketView: UIButton {
     static let WIDTH: CGFloat = 60
     static let HEIGHT: CGFloat = 100
 
-    private let redPacket: TLRedPacket
-    weak var delegate: TLRedPacketViewDelegate?
+    private let redpacket: TLRedpacket
+    weak var delegate: TLRedpacketViewDelegate?
     
     private var animate: UIViewPropertyAnimator?
     
-    init(frame: CGRect, redPacket: TLRedPacket) {
-        self.redPacket = redPacket
+    init(frame: CGRect, redacket: TLRedpacket) {
+        self.redpacket = redacket
         super.init(frame: frame)
-        configureRedPacketButton()
+        setImage(UIImage(named: redpacket.defaultImageName), for: .normal)
+        setImage(UIImage(named: redpacket.imageName), for: .selected)
+        addTarget(self, action: #selector(redPacketButtonOnClicked), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -54,12 +56,6 @@ class TLRedPacketView: UIButton {
             }
         }
         return nil
-    }
-    
-    private func configureRedPacketButton() {
-        setImage(UIImage(named: redPacket.defaultImageName), for: .normal)
-        setImage(UIImage(named: redPacket.imageName), for: .selected)
-        addTarget(self, action: #selector(redPacketButtonOnClicked), for: .touchUpInside)
     }
     
     func startAnimation(_ transform: CGAffineTransform) {
@@ -83,7 +79,7 @@ class TLRedPacketView: UIButton {
         if !sender.isSelected {
             stopAnimation()
             sender.isSelected = true
-            delegate?.tlRedPacketViewDidSelected(self, redPacket: redPacket)
+            delegate?.tlRedpacketViewDidSelected(self, redPacket: redpacket)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 guard let weakSelf = self else { return }
                 weakSelf.removeFromSuperview()
@@ -102,12 +98,12 @@ class TLRedPacketView: UIButton {
 
 #if canImport(SwiftUI) && DEBUG
 @available(iOS 14.0, *)
-struct TLRedPacketView_Previews: PreviewProvider {
+struct TLRedpacketView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {            VStack {
-            let v = TLRedPacketView(frame: .zero, redPacket: .init(reward: .ticket))
+            let v = TLRedpacketView(frame: .zero, redacket: .init(reward: .score(5)))
                 TLViewRepresentable(v)
-                    .frame(width: TLRedPacketView.WIDTH, height: TLRedPacketView.HEIGHT, alignment: .center)
+                    .frame(width: TLRedpacketView.WIDTH, height: TLRedpacketView.HEIGHT, alignment: .center)
                     .onAppear(perform: {
                         v.startAnimation(.init(translationX: 0, y: UIScreen.main.bounds.height))
                     })

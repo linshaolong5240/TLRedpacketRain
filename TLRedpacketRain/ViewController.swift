@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let vc = TLRedPacketRainViewController()
+        let vc = TLRedpacketRainViewController()
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: false, completion: nil)
     }

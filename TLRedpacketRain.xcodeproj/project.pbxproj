@@ -13,11 +13,11 @@
 		EF31B2A026FC749000023DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31B29E26FC749000023DF2 /* Main.storyboard */; };
 		EF31B2A226FC749200023DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF31B2A126FC749200023DF2 /* Assets.xcassets */; };
 		EF31B2A526FC749200023DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31B2A326FC749200023DF2 /* LaunchScreen.storyboard */; };
-		EF31B2B526FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */; };
-		EF31B2B626FC74A200023DF2 /* TLRedPacketRainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */; };
-		EF31B2B726FC74A200023DF2 /* TLRedPacketRainStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */; };
-		EF31B2B826FC74A200023DF2 /* TLRedPacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */; };
-		EF31B2B926FC74A200023DF2 /* TLRedPacketRainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */; };
+		EF31B2B526FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AD26FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift */; };
+		EF31B2B626FC74A200023DF2 /* TLRedpacketRainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2AF26FC74A200023DF2 /* TLRedpacketRainViewModel.swift */; };
+		EF31B2B726FC74A200023DF2 /* TLRedpacketRainStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B026FC74A200023DF2 /* TLRedpacketRainStatusView.swift */; };
+		EF31B2B826FC74A200023DF2 /* TLRedpacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B126FC74A200023DF2 /* TLRedpacketView.swift */; };
+		EF31B2B926FC74A200023DF2 /* TLRedpacketRainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B226FC74A200023DF2 /* TLRedpacketRainViewController.swift */; };
 		EF31B2BA26FC74A200023DF2 /* TLPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B326FC74A200023DF2 /* TLPreview.swift */; };
 		EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */; };
 		EF31B2BE26FC74CF00023DF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF31B2BD26FC74CF00023DF2 /* SnapKit */; };
@@ -32,11 +32,11 @@
 		EF31B2A126FC749200023DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF31B2A426FC749200023DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF31B2A626FC749200023DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainStartCountdownView.swift; sourceTree = "<group>"; };
-		EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainViewModel.swift; sourceTree = "<group>"; };
-		EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainStatusView.swift; sourceTree = "<group>"; };
-		EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketView.swift; sourceTree = "<group>"; };
-		EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedPacketRainViewController.swift; sourceTree = "<group>"; };
+		EF31B2AD26FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketRainStartCountdownView.swift; sourceTree = "<group>"; };
+		EF31B2AF26FC74A200023DF2 /* TLRedpacketRainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketRainViewModel.swift; sourceTree = "<group>"; };
+		EF31B2B026FC74A200023DF2 /* TLRedpacketRainStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketRainStatusView.swift; sourceTree = "<group>"; };
+		EF31B2B126FC74A200023DF2 /* TLRedpacketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketView.swift; sourceTree = "<group>"; };
+		EF31B2B226FC74A200023DF2 /* TLRedpacketRainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketRainViewController.swift; sourceTree = "<group>"; };
 		EF31B2B326FC74A200023DF2 /* TLPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLPreview.swift; sourceTree = "<group>"; };
 		EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLViewWrapperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,10 +89,10 @@
 		EF31B2AC26FC74A200023DF2 /* RedPacketRain */ = {
 			isa = PBXGroup;
 			children = (
-				EF31B2AD26FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift */,
-				EF31B2B026FC74A200023DF2 /* TLRedPacketRainStatusView.swift */,
-				EF31B2B226FC74A200023DF2 /* TLRedPacketRainViewController.swift */,
-				EF31B2B126FC74A200023DF2 /* TLRedPacketView.swift */,
+				EF31B2AD26FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift */,
+				EF31B2B026FC74A200023DF2 /* TLRedpacketRainStatusView.swift */,
+				EF31B2B226FC74A200023DF2 /* TLRedpacketRainViewController.swift */,
+				EF31B2B126FC74A200023DF2 /* TLRedpacketView.swift */,
 				EF31B2AE26FC74A200023DF2 /* ViewModel */,
 			);
 			path = RedPacketRain;
@@ -101,7 +101,7 @@
 		EF31B2AE26FC74A200023DF2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EF31B2AF26FC74A200023DF2 /* TLRedPacketRainViewModel.swift */,
+				EF31B2AF26FC74A200023DF2 /* TLRedpacketRainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -183,13 +183,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF31B29D26FC749000023DF2 /* ViewController.swift in Sources */,
-				EF31B2B626FC74A200023DF2 /* TLRedPacketRainViewModel.swift in Sources */,
-				EF31B2B926FC74A200023DF2 /* TLRedPacketRainViewController.swift in Sources */,
-				EF31B2B826FC74A200023DF2 /* TLRedPacketView.swift in Sources */,
-				EF31B2B526FC74A200023DF2 /* TLRedPacketRainStartCountdownView.swift in Sources */,
+				EF31B2B626FC74A200023DF2 /* TLRedpacketRainViewModel.swift in Sources */,
+				EF31B2B926FC74A200023DF2 /* TLRedpacketRainViewController.swift in Sources */,
+				EF31B2B826FC74A200023DF2 /* TLRedpacketView.swift in Sources */,
+				EF31B2B526FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift in Sources */,
 				EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */,
 				EF31B29926FC749000023DF2 /* AppDelegate.swift in Sources */,
-				EF31B2B726FC74A200023DF2 /* TLRedPacketRainStatusView.swift in Sources */,
+				EF31B2B726FC74A200023DF2 /* TLRedpacketRainStatusView.swift in Sources */,
 				EF31B29B26FC749000023DF2 /* SceneDelegate.swift in Sources */,
 				EF31B2BA26FC74A200023DF2 /* TLPreview.swift in Sources */,
 			);

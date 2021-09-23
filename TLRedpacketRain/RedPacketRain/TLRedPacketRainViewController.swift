@@ -1,6 +1,6 @@
 //
-//  TLRedPacketRainViewController.swift
-//  TLRedPacketRain
+//  TLRedpacketRainViewController.swift
+//  TLRedpacketRain
 //
 //  Created by teenloong on 2021/9/18.
 //
@@ -11,35 +11,35 @@ import SnapKit
 import SwiftUI
 #endif
 
-class TLRedPacketRainViewController: UIViewController {
-    let viewModel = TLRedPacketRainViewModel(redPacketFireTimeInterval: 0.5, durationTime: 20)
+class TLRedpacketRainViewController: UIViewController {
+    let viewModel = TLRedpacketRainViewModel(redPacketFireTimeInterval: 0.5, durationTime: 20)
     
-    private var redPacketRainView = UIView()
-    private let redPacketRainStatusView = TLRedPacketRainStatusView()
+    private var redpacketRainView = UIView()
+    private let redpacketRainStatusView = TLRedpacketRainStatusView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7027510631)
-        configureRedPacketRainView()
-        configureRedPacketRainStatusView()
-        configureRedPacketRainStartCountdownView()
+        configureRedpacketRainView()
+        configureRedpacketRainStatusView()
+        configureRedpacketRainStartCountdownView()
         configureCloseButton()
         
         viewModel.delegate = self
     }
     
-    private func configureRedPacketRainView() {
-        view.addSubview(redPacketRainView)
-        redPacketRainView.snp.makeConstraints { make in
+    private func configureRedpacketRainView() {
+        view.addSubview(redpacketRainView)
+        redpacketRainView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
-    private func configureRedPacketRainStartCountdownView() {
-        let startCountdownView = TLRedPacketRainStartCountdownView(frame: .zero, totalTime: 3) { [weak self] in
+    private func configureRedpacketRainStartCountdownView() {
+        let startCountdownView = TLRedpacketRainStartCountdownView(frame: .zero, totalTime: 3) { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.viewModel.resetTimer()
-            weakSelf.redPacketRainStatusView.isHidden = false
+            weakSelf.redpacketRainStatusView.isHidden = false
         }
         
         view.addSubview(startCountdownView)
@@ -53,14 +53,14 @@ class TLRedPacketRainViewController: UIViewController {
         startCountdownView.resetTimer()
     }
     
-    private func configureRedPacketRainStatusView() {
-        view.addSubview(redPacketRainStatusView)
-        redPacketRainStatusView.snp.makeConstraints { make in
+    private func configureRedpacketRainStatusView() {
+        view.addSubview(redpacketRainStatusView)
+        redpacketRainStatusView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
             make.centerX.equalToSuperview()
         }
-        redPacketRainStatusView.isHidden = true
-        redPacketRainStatusView.setCountdown(viewModel.durationTime)
+        redpacketRainStatusView.isHidden = true
+        redpacketRainStatusView.setCountdown(viewModel.durationTime)
     }
     
     private func configureCloseButton() {
@@ -91,35 +91,35 @@ class TLRedPacketRainViewController: UIViewController {
 
 }
 
-extension TLRedPacketRainViewController: TLRedPacketRainViewModelDelegate {
+extension TLRedpacketRainViewController: TLRedpacketRainViewModelDelegate {
     
-    func redPacketRainViewModel(_ redPacketRainViewModel: TLRedPacketRainViewModel, fired redPackets: [TLRedPacket]) {
-        redPackets.forEach { redPacket in
-            let xOffset: CGFloat = CGFloat(Int.random(in: 0...(Int(view.bounds.width) - Int(TLRedPacketView.WIDTH))))
-            let yOffset: CGFloat = -CGFloat(Int.random(in: 0...Int(TLRedPacketView.HEIGHT))) - TLRedPacketView.HEIGHT
-            let v = TLRedPacketView(frame: CGRect(x: xOffset, y: yOffset, width: TLRedPacketView.WIDTH, height: TLRedPacketView.HEIGHT), redPacket: redPacket)
-            redPacketRainView.addSubview(v)
-            v.startAnimation(.init(translationX: 0, y: view.bounds.height + TLRedPacketView.HEIGHT * 2))
+    func redpacketRainViewModel(_ redPacketRainViewModel: TLRedpacketRainViewModel, fired redpackets: [TLRedpacket]) {
+        redpackets.forEach { redPacket in
+            let xOffset: CGFloat = CGFloat(Int.random(in: 0...(Int(view.bounds.width) - Int(TLRedpacketView.WIDTH))))
+            let yOffset: CGFloat = -CGFloat(Int.random(in: 0...Int(TLRedpacketView.HEIGHT))) - TLRedpacketView.HEIGHT
+            let v = TLRedpacketView(frame: CGRect(x: xOffset, y: yOffset, width: TLRedpacketView.WIDTH, height: TLRedpacketView.HEIGHT), redacket: redPacket)
+            redpacketRainView.addSubview(v)
+            v.startAnimation(.init(translationX: 0, y: view.bounds.height + TLRedpacketView.HEIGHT * 2))
             v.delegate = self
         }
     }
     
-    func redPacketRainViewModel(_ redPacketRainViewModel: TLRedPacketRainViewModel, remainingTime: TimeInterval) {
-        redPacketRainStatusView.setCountdown(remainingTime)
+    func redPacketRainViewModel(_ redpacketRainViewModel: TLRedpacketRainViewModel, remainingTime: TimeInterval) {
+        redpacketRainStatusView.setCountdown(remainingTime)
     }
     
-    func redPacketRainFinished(_ redPacketRainViewModel: TLRedPacketRainViewModel) {
-        redPacketRainView.removeFromSuperview()
+    func redPacketRainFinished(_ redpacketRainViewModel: TLRedpacketRainViewModel) {
+        redpacketRainView.removeFromSuperview()
     }
 }
 
-extension TLRedPacketRainViewController: TLRedPacketViewDelegate {
-    func tlRedPacketViewDidSelected(_ redPacketView: TLRedPacketView, redPacket: TLRedPacket) {
-        viewModel.openRedPacket(redPacket)
+extension TLRedpacketRainViewController: TLRedpacketViewDelegate {
+    func tlRedpacketViewDidSelected(_ redpacketView: TLRedpacketView, redPacket: TLRedpacket) {
+        viewModel.openRedpacket(redPacket)
         switch redPacket.reward {
         case .empty: break
         case .score:
-            redPacketRainStatusView.setScore(viewModel.totalScore)
+            redpacketRainStatusView.setScore(viewModel.totalScore)
         case .ticket: break
         }
     }
@@ -127,12 +127,12 @@ extension TLRedPacketRainViewController: TLRedPacketViewDelegate {
 
 #if canImport(SwiftUI) && DEBUG
 @available(iOS 14.0, *)
-struct TLRedPacketRainMainView_Previews: PreviewProvider {
+struct TLRedpacketRainMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.pink
             VStack {
-                let vc = TLRedPacketRainViewController()
+                let vc = TLRedpacketRainViewController()
                 TLViewControllerRepresentable(vc)
             }
         }.ignoresSafeArea()

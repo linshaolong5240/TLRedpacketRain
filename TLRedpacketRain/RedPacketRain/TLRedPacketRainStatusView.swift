@@ -1,6 +1,6 @@
 //
-//  TLRedPacketRainStatusView.swift
-//  TLRedPacketRain
+//  TLRedpacketRainStatusView.swift
+//  TLRedpacketRain
 //
 //  Created by teenloong on 2021/9/18.
 //
@@ -11,7 +11,7 @@ import SnapKit
 import SwiftUI
 #endif
 
-class TLRedPacketRainStatusView: UIView {
+class TLRedpacketRainStatusView: UIView {
     
     private let content = UIStackView()
     private var countdownLabel = UILabel()
@@ -85,12 +85,12 @@ class TLRedPacketRainStatusView: UIView {
 
 #if canImport(SwiftUI) && DEBUG
 @available(iOS 14.0, *)
-struct TLRedPacketRainStatusView_Previews: PreviewProvider {
+struct TLRedpacketRainStatusView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.pink
             VStack {
-                let v = TLRedPacketRainStatusView()
+                let v = TLRedpacketRainStatusView()
                 TLViewRepresentable(v)
                     .background(Color.black.opacity(0.3))
                     .frame(height: 80)

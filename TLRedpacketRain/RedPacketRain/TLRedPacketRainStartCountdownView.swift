@@ -1,6 +1,6 @@
 //
-//  TLRedPacketRainStartCountdownView.swift
-//  TLRedPacketRain
+//  TLRedpacketRainStartCountdownView.swift
+//  TLRedpacketRain
 //
 //  Created by teenloong on 2021/9/18.
 //
@@ -11,7 +11,7 @@ import SnapKit
 import SwiftUI
 #endif
 
-class TLRedPacketRainStartCountdownView: UIView {
+class TLRedpacketRainStartCountdownView: UIView {
     let HEIGHT: CGFloat = 228
     private var timer: Timer?
     private var totalTime: TimeInterval
@@ -137,12 +137,12 @@ class TLRedPacketRainStartCountdownView: UIView {
 
 #if canImport(SwiftUI) && DEBUG
 @available(iOS 14.0, *)
-struct TLRedPacketRainStartCountdownView_Previews: PreviewProvider {
+struct TLRedpacketRainStartCountdownView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.pink
             VStack {
-                let v = TLRedPacketRainStartCountdownView(frame: .zero, totalTime: 3)
+                let v = TLRedpacketRainStartCountdownView(frame: .zero, totalTime: 3)
                 TLViewRepresentable(v)
                     .rotationEffect(.degrees(-20))
                     .onAppear(perform: {
