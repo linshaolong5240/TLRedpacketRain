@@ -19,7 +19,6 @@
 		EF31B2B826FC74A200023DF2 /* TLRedpacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B126FC74A200023DF2 /* TLRedpacketView.swift */; };
 		EF31B2B926FC74A200023DF2 /* TLRedpacketRainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B226FC74A200023DF2 /* TLRedpacketRainViewController.swift */; };
 		EF31B2BA26FC74A200023DF2 /* TLPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B326FC74A200023DF2 /* TLPreview.swift */; };
-		EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */; };
 		EF31B2BE26FC74CF00023DF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF31B2BD26FC74CF00023DF2 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		EF31B2B126FC74A200023DF2 /* TLRedpacketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketView.swift; sourceTree = "<group>"; };
 		EF31B2B226FC74A200023DF2 /* TLRedpacketRainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRedpacketRainViewController.swift; sourceTree = "<group>"; };
 		EF31B2B326FC74A200023DF2 /* TLPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLPreview.swift; sourceTree = "<group>"; };
-		EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLViewWrapperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +72,6 @@
 			children = (
 				EF31B2AC26FC74A200023DF2 /* RedPacketRain */,
 				EF31B2B326FC74A200023DF2 /* TLPreview.swift */,
-				EF31B2B426FC74A200023DF2 /* TLViewWrapperViewController.swift */,
 				EF31B29826FC749000023DF2 /* AppDelegate.swift */,
 				EF31B29A26FC749000023DF2 /* SceneDelegate.swift */,
 				EF31B29C26FC749000023DF2 /* ViewController.swift */,
@@ -187,7 +184,6 @@
 				EF31B2B926FC74A200023DF2 /* TLRedpacketRainViewController.swift in Sources */,
 				EF31B2B826FC74A200023DF2 /* TLRedpacketView.swift in Sources */,
 				EF31B2B526FC74A200023DF2 /* TLRedpacketRainStartCountdownView.swift in Sources */,
-				EF31B2BB26FC74A200023DF2 /* TLViewWrapperViewController.swift in Sources */,
 				EF31B29926FC749000023DF2 /* AppDelegate.swift in Sources */,
 				EF31B2B726FC74A200023DF2 /* TLRedpacketRainStatusView.swift in Sources */,
 				EF31B29B26FC749000023DF2 /* SceneDelegate.swift in Sources */,
