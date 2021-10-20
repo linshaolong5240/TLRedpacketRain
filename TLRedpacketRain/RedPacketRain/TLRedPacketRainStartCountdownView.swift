@@ -40,6 +40,7 @@ class TLRedpacketRainStartCountdownView: UIView {
     }
     
     private func configureBanner() {
+        lefImageiew.contentMode = .right
         addSubview(lefImageiew)
         lefImageiew.snp.makeConstraints { make in
             make.right.equalTo(snp.centerX)
@@ -47,7 +48,7 @@ class TLRedpacketRainStartCountdownView: UIView {
             make.height.equalTo(HEIGHT)
             make.width.equalToSuperview()
         }
-        
+        rightImageiew.contentMode = .left
         addSubview(rightImageiew)
         rightImageiew.snp.makeConstraints { make in
             make.left.equalTo(snp.centerX)

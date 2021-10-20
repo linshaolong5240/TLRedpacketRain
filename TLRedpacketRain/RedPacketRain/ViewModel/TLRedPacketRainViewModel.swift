@@ -7,13 +7,14 @@
 
 import Foundation
 
-enum TLRedpacketReward {
+public enum TLRedpacketReward {
     case empty
     case score(Int)
     case ticket
 }
 
-struct TLRedpacket {
+public struct TLRedpacket {
+    var id: Int = -1
     var reward: TLRedpacketReward = .empty
 }
 
@@ -24,8 +25,17 @@ protocol TLRedpacketRainViewModelDelegate: class {
 }
 
 class TLRedpacketRainViewModel {
-    private var openedRedpackkets: [TLRedpacket] = .init()
-    
+    private(set) var redpackkets: [TLRedpacket]
+    private(set) var openedRedpackkets: [TLRedpacket] = .init()
+    var openedScoreRedpackkets: [TLRedpacket] {
+        return openedRedpackkets.filter({ item in
+            switch item.reward {
+            case .score: return true
+            default:    return false
+            }
+        })
+    }
+
     var totalScore: Int {
         openedRedpackkets.map { redPacket -> Int in
             if case .score(let value) = redPacket.reward {
@@ -34,17 +44,23 @@ class TLRedpacketRainViewModel {
         }.reduce(0, +)
     }
     
+    private let redpacketFireTimeInterval: TimeInterval
+    private(set) var fireNumber: Int
+    private(set) var fallTime: TimeInterval
+    
     private var remainingTime: TimeInterval
     private(set) var durationTime: TimeInterval
-    private let redpacketFireTimeInterval: TimeInterval
     private var countdownTimer: Timer?
     private var redpacketFireTimer: Timer?
     weak var delegate: TLRedpacketRainViewModelDelegate?
     
-    init(redPacketFireTimeInterval: TimeInterval, durationTime: TimeInterval) {
-        self.redpacketFireTimeInterval = redPacketFireTimeInterval
-        self.durationTime = durationTime
+    init(fireTimeInterval: TimeInterval, fireNumber: Int, fallTime: TimeInterval, redpackkets: [TLRedpacket]) {
+        self.redpacketFireTimeInterval = fireTimeInterval
+        self.fireNumber = fireNumber
+        self.fallTime = fallTime
+        self.durationTime = .init(Double(redpackkets.count) / Double(fireNumber) * fireTimeInterval) + fallTime
         self.remainingTime = durationTime
+        self.redpackkets = redpackkets
     }
     
     deinit {
@@ -73,10 +89,20 @@ class TLRedpacketRainViewModel {
     }
     
     @objc private func fireRedpacket() {
-        delegate?.redpacketRainViewModel(self, fired: [TLRedpacket(reward: .score(5)), TLRedpacket(reward: .ticket), TLRedpacket(reward: .empty)])
+        var redPacketsToFire: [TLRedpacket] = .init()
+        for _ in (0..<fireNumber) {
+            if redpackkets.count > 0 {
+                redPacketsToFire.append(redpackkets.removeFirst())
+            }
+        }
+        delegate?.redpacketRainViewModel(self, fired: redPacketsToFire)
     }
     
     func openRedpacket(_ redPacket: TLRedpacket) {
         openedRedpackkets.append(redPacket)
+    }
+    
+    func getRedpacket() {
+        
     }
 }

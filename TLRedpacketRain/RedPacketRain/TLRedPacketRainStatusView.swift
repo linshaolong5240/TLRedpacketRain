@@ -48,7 +48,7 @@ class TLRedpacketRainStatusView: UIView {
         scoreLabel.textColor = #colorLiteral(red: 0.9957824349, green: 0.2807509601, blue: 0.1596641243, alpha: 1)
         scoreLabel.font = .systemFont(ofSize: 22, weight: .heavy)
         
-        scoreDescriptionLabel.text = NSLocalizedString("已获得金币", comment: "")
+        scoreDescriptionLabel.text = "Collected  Coins"
         scoreDescriptionLabel.textAlignment = .center
         scoreDescriptionLabel.textColor = #colorLiteral(red: 0.9983987212, green: 0.8954797387, blue: 0.3431963921, alpha: 1)
         scoreDescriptionLabel.font = .systemFont(ofSize: 12, weight: .regular)
@@ -57,13 +57,13 @@ class TLRedpacketRainStatusView: UIView {
     }
     
     func setCountdown(_ timeInterval: TimeInterval) {
-        let string = NSLocalizedString("剩余时间", comment: "") + String(format: " %02d:%02d", Int(timeInterval) / 60, Int(timeInterval) % 60)
+        let string = "Remaining Time" + String(format: " %02d:%02d", Int(timeInterval) / 60, Int(timeInterval) % 60)
         countdownLabel.text = string
     }
     
     func setScore(_ score: Int) {
         let prefix = "\(score)"
-        let suffix = NSLocalizedString(" 币", comment: "")
+        let suffix = " " + "Coins"
         let prefixAttribute: [NSAttributedString.Key: Any] = [.foregroundColor: #colorLiteral(red: 0.9957824349, green: 0.2807509601, blue: 0.1596641243, alpha: 1), .font: UIFont.systemFont(ofSize: 22, weight: .heavy)]
         let suffixAttribute: [NSAttributedString.Key: Any] = [.foregroundColor: #colorLiteral(red: 0.9983987212, green: 0.8954797387, blue: 0.3431963921, alpha: 1), .font: UIFont.systemFont(ofSize: 12, weight: .medium)]
         let attributedText: NSMutableAttributedString = .init(string: prefix + suffix)

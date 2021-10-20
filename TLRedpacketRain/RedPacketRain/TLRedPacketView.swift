@@ -25,41 +25,62 @@ fileprivate extension TLRedpacket {
     }
     
     var defaultImageName: String { "red_packet_Falling" }
+    
+    var desc: String {
+        switch reward {
+        case .empty:    return "empty"
+        case .score(let value): return "+\(value) " + "Coins"
+        case .ticket:   return "Take Away Vouchers"
+        }
+    }
 }
 
 class TLRedpacketView: UIButton {
     static let WIDTH: CGFloat = 60
     static let HEIGHT: CGFloat = 100
 
-    private let redpacket: TLRedpacket
+    private var redpacket: TLRedpacket
     weak var delegate: TLRedpacketViewDelegate?
+
+    private let descLabel: UILabel = UILabel()
     
     private var animate: UIViewPropertyAnimator?
     
-    init(frame: CGRect, redacket: TLRedpacket) {
-        self.redpacket = redacket
+    init(frame: CGRect, redpacket: TLRedpacket) {
+        self.redpacket = redpacket
         super.init(frame: frame)
         setImage(UIImage(named: redpacket.defaultImageName), for: .normal)
         setImage(UIImage(named: redpacket.imageName), for: .selected)
         addTarget(self, action: #selector(redPacketButtonOnClicked), for: .touchUpInside)
+        configureDescLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    private func configureDescLabel() {
+        descLabel.text = redpacket.desc
+        descLabel.textColor = #colorLiteral(red: 0.9983987212, green: 0.8954797387, blue: 0.3431963921, alpha: 1)
+        descLabel.textAlignment = .center
+        descLabel.font = .systemFont(ofSize: 20, weight: .heavy)
+        descLabel.adjustsFontSizeToFitWidth = true
+        descLabel.alpha = 0.0
+        descLabel.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 28)
+        addSubview(descLabel)
     }
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let locationPoint = layer.convert(point, to: layer.presentation())
         if let presentationLayer = layer.presentation() {
             if presentationLayer.contains(locationPoint) {
-                return self
+                return isSelected ? nil : self
             }
         }
         return nil
     }
     
-    func startAnimation(_ transform: CGAffineTransform) {
-        animate = UIViewPropertyAnimator(duration: 3, curve: .linear) { [weak self] in
+    func startAnimation(_ transform: CGAffineTransform, duration: TimeInterval) {
+        animate = UIViewPropertyAnimator(duration: duration, curve: .linear) { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.transform = transform
         }
@@ -80,12 +101,35 @@ class TLRedpacketView: UIButton {
             stopAnimation()
             sender.isSelected = true
             delegate?.tlRedpacketViewDidSelected(self, redPacket: redpacket)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.curveLinear]) { [weak self] in
+                guard let weakSelf = self else { return }
+                weakSelf.descLabel.alpha = 1.0
+                weakSelf.descLabel.frame = CGRect(x: 0, y: -20, width: weakSelf.bounds.width, height: 28)
+            } completion: { status in
+                
+            }
+            
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: [.curveLinear]) { [weak self] in
+                guard let weakSelf = self else { return }
+                weakSelf.alpha = 0.0
+            } completion: { [weak self] status in
                 guard let weakSelf = self else { return }
                 weakSelf.removeFromSuperview()
             }
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+//                guard let weakSelf = self else { return }
+//                weakSelf.removeFromSuperview()
+//            }
         }
     }
+    
+    func setData(_ data: TLRedpacket) {
+        redpacket = data
+        setImage(UIImage(named: redpacket.imageName), for: .selected)
+        descLabel.text = redpacket.desc
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -100,13 +144,11 @@ class TLRedpacketView: UIButton {
 @available(iOS 14.0, *)
 struct TLRedpacketView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {            VStack {
-            let v = TLRedpacketView(frame: .zero, redacket: .init(reward: .score(5)))
+        ZStack {
+            VStack {
+                let v = TLRedpacketView(frame: .zero, redpacket: .init(reward: .empty))
                 TLViewRepresentable(v)
                     .frame(width: TLRedpacketView.WIDTH, height: TLRedpacketView.HEIGHT, alignment: .center)
-                    .onAppear(perform: {
-                        v.startAnimation(.init(translationX: 0, y: UIScreen.main.bounds.height))
-                    })
             }
         }.ignoresSafeArea()
     }
